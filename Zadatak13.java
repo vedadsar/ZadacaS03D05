@@ -13,8 +13,11 @@ public class Zadatak13 {
 	System.out.println("}");
 	
 }
-
-	private static void binarni(int unos) {
+/**
+ * Funkcija pretvara neki broj u binarni, i ubacuje ih u niz karaktera.
+ * @param unos
+ */
+	public static void binarni(int unos) {
 		String binarniBroj = "";
 		for ( int i = 0; i<8;i++){
 			

@@ -14,7 +14,11 @@
  *
  */
 public class Zadatak10 {
-
+/**
+ * Funkcija trazi od korisnika da unese recenicu, a zatim ispisuje zadnju rijec te recenice.
+ * @param recenica
+ * @return
+ */
 	public static String str(String recenica) {
 
 		int brojac = 0;

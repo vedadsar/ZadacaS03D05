@@ -10,13 +10,7 @@
  * poslani string podijelimo na mjestima gdje se pojavljuje znak koji smo
  * poslali.
  * 
- * Primjer:
- * 
- * Ako funkciju pozovemo sa parametrima “ovaj zadatak je zabavan” i znakom
- * 
- * razmak ‘ ‘ funkcija treba da vrati niz { “ovaj”, “zadatak”, “je”, “zabavan” }
- * 
- * Napomena:
+ 
  * 
  * Pri izradi zadatka zabranjeno je koristiti metodu split iz klase string.
  * 
@@ -24,7 +18,11 @@
  *
  */
 public class Zadatak5 {
-
+/**
+ * Funkcija ispisuje niz stringova.
+ * @param nekiString niz stringova
+ * @return ispis.
+ */
 	public static String[] podjeljeniString(String[] nekiString) {
 		String[] str = nekiString;
 		for (int i = 0; i < nekiString.length; i++) {
@@ -35,7 +33,12 @@ public class Zadatak5 {
 
 		return str;
 	}
-
+/**
+ * Funkcija za parametar " karakter "  u stringu recenica vrsi razmak i brise karakter.
+ * @param recenica bilo koji string
+ * @param karakter bilo koji char
+ * @return
+ */
 	public static String[] str(String recenica, char karakter) {
 		String[] nizStringova = new String[recenica.length()];
 		String novaRijec = "";
@@ -45,7 +48,6 @@ public class Zadatak5 {
 			if (recenica.charAt(i) != karakter) {
 				novaRijec = novaRijec + recenica.substring(i, i + 1);
 
-				
 			} else {
 				nizStringova[j] = novaRijec;
 				j++;
@@ -64,7 +66,7 @@ public class Zadatak5 {
 		String rijec = TextIO.getln();
 		System.out.println("Unesite karakter");
 		char slovo = TextIO.getChar();
-        String rijec1 = rijec + slovo;
+		String rijec1 = rijec + slovo;
 		podjeljeniString(str((rijec1), slovo));
 	}
 

@@ -1,5 +1,9 @@
 public class Zadatak14 {
-
+/**
+ * funkcija pretvara binarni broj u int.
+ * @param bin bilo koji binarni broj.
+ * @return int broj
+ */
 	public static int binToInt(String bin) {
 
 		int stepen = 128;
@@ -19,14 +23,22 @@ public class Zadatak14 {
 
 		return zbir;
 	}
-
+/**
+ * funkcija sabira dva broja koja cemo poslije vratiti u binarni string.
+ * @param bin1  broj1
+ * @param bin2 broj 2 
+ * @return suma.
+ */
 	public static int zbirBin(String bin1, String bin2) {
 
 		int sumaBin = binToInt(bin1) + binToInt(bin2);
 
 		return sumaBin;
 	}
-
+/**
+ * funkcija pretvara broj u binarni broj ( ubacuje u string )
+ * @param sumaBin
+ */
 	private static void stringZbirBin(int sumaBin) {
 
 		String binarniBroj = "";

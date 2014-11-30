@@ -10,7 +10,10 @@ String bitcamp treba da postane elwfdps
  *
  */
 public class Zadatak11 {
-	
+	/**
+	 * Funkcija prima string (rijec) i svaki karakter te rijeci pomjera za 3 vrijednosti u ascii tabeli.
+	 * @param rijec
+	 */
 	public static void ispis(String rijec){
 		char [] niz = rijec.toCharArray();
 	

@@ -9,7 +9,11 @@ broj a zatim ispisuje sumu njegovih cifara.
  */
 import java.util.Scanner;
 public class Zadatak1 {
-
+/**
+ * Funkcija vraca sumi cifara unesenog broja.
+ * @param broj bilo koji int
+ * @return suma cifara.
+ */
 	public static int zbir( int broj){
 		int zbir = 0;
 		while (broj>0){

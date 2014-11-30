@@ -18,7 +18,11 @@
 import java.util.Scanner;
 
 public class Zadatak3 {
-
+/**
+ * Funkcija upisuje brojeve u niz
+ * @param brojClanova = broj clanova niza, bilo koji int.
+ * @return niz brojove
+ */
 	public static int[] niz(int brojClanova) {
 		Scanner in = new Scanner(System.in);
 		int[] niz = new int[brojClanova];
@@ -30,7 +34,11 @@ public class Zadatak3 {
 		}
 		return niz;
 	}
-
+/**
+ * Novi niz pomjeren za jedno mjesto u lijevo. zadnja pozicija 0.
+ * @param niz  niz integera.
+ * @return niz pomjeren u lijevo.
+ */
 	public static int[] promjeniNiz(int[] niz) {
 
 		for (int i = 1; i < niz.length; i++) {

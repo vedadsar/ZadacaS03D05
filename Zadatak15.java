@@ -1,3 +1,10 @@
+
+/**
+ * Citav program je copy paste zadatka 14, samo umjesto znaka "+", znak "-".
+ * @author Vedad
+ *
+ */
+
 public class Zadatak15 {
 
 	public static int binToInt(String bin) {

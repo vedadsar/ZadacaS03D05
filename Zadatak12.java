@@ -3,8 +3,7 @@
 reprezentaciju u obliku string-a. Binarna reprezentacija treba da ima 8 bitova, 
 odnosno broj 255 ce biti 11111111 a broj 3 ce biti 00000011.
 Napomena
-Pri izradi zadatka zabranjeno je koristiti metode iz Integer klase. Prisjetiti se da se 
-negativni binarni brojevi mogu dobiti pomocu komplementa dvojke.
+Pri izradi zadatka zabranjeno je koristiti metode iz Integer klase. 
  * @author Vedad
  *
  */
@@ -22,8 +21,11 @@ public class Zadatak12 {
 	System.out.println(Integer.toBinaryString(unos));
 	
 }
-
-	private static void binarni(int unos) {
+/**
+ * Funkcija pretvara pozitivne int brojeve u binarne brojeve.
+ * @param unos
+ */
+	public static void binarni(int unos) {
 		String binarniBroj = "";
 		for ( int i = 0; i<8;i++){
 			

@@ -16,7 +16,11 @@
 import java.util.Scanner;
 
 public class Zadatak2 {
-
+/**
+ * Funkcija provjerava da li je uneseni broj djeljiv sa sumom svojih cifara.
+ * @param broj bilo koji integer
+ * @return 
+ */
 	public static int zbir(int broj) {
 		int zbir = 0;
 		int brojCopy = broj;
@@ -33,7 +37,10 @@ public class Zadatak2 {
 
 		return brojCopy;
 	}
-
+/**
+ * Funkcija poziva funkciju zbir za interval od 1 do broja kojeg je korisnik unio.
+ * @param broj
+ */
 	public static void interval(int broj) {
 		for (int i = 1; i <= broj; i++) {
 			zbir(i);

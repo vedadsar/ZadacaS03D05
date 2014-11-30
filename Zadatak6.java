@@ -10,7 +10,12 @@ U izradi programa zabranjeno je koristiti klasu StringBuilder.
 
 import java.util.Scanner;
 public class Zadatak6 {
-
+/**
+ * Funkcija prima parametar String kao neku recenicu, 
+ * zatim u niz ubacuje charove tog stringa okrenutim redosljedom.
+ * @param recenica bilo koji string, nasa re cenica
+ * @return niz karaktera, okrenutim redosljedom.
+ */
 	public static String [] niz(String recenica){
 		String slovo;
 		String [] okrenutaRecenica = new String [recenica.length()];

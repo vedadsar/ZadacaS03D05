@@ -8,36 +8,59 @@ u programu koji ce od korisnika traziti da unosi brojeve a zatim ispisuje zadnji
 
 unesenih brojeva u istom redoslijedu u kojem su uneseni.
  */
-import java.util.Scanner;
+
 
 public class Zadatak4 {
-
+/**
+ * Funkcija prima brojeve, i smjesta ih u niz. Na unos -1 program prekida unos. 
+ * Zatim funkcija uzima i ispisuje zadnjih 10 unesenih brojeva ( novi niz )
+ * @return = Niz zadnjih 10 unesenih brojeva.
+ */
 	public static int[] unosBrojeva() {
-		Scanner in = new Scanner(System.in);
+		
 		int kraj = -1;
 		int unos = 0;
-		int[] niz = new int[10];
+		int brojac=0;
+		int[] niz = new int[100];
+		int[] praviNiz = new int[10];
+		System.out.println("Unesite bar 10 brojeva razlicitih od -1");
 		do {
-			for (int i = 0; i < 10; i++) {
+			int i=0;
+			while (unos != kraj) {
 				System.out.println("Unesite broj");
-				unos = in.nextInt();
+				unos = TextIO.getlnInt();
 
 				if (unos == kraj) {
 					System.out.println("Unijeli ste -1, prekid");
 					break;
 				}
+				brojac++;
 				niz[i] = unos;
-			}
+				i++;
+			}  
 		} while (unos != kraj);
-
-		for (int i = 0; i < niz.length; i++) {
-			System.out.println(niz[i]);
-
+        
+		
+		
+		for(int j=0; j<10;j++){
+			
+			praviNiz[j] = niz[(brojac-10)];
+			brojac++;
 		}
+		
+		System.out.println("Zadnjih 10 brojeva koje ste unijeli su: ");
+		for (int i = 0; i <10 ; i++) {
+			System.out.print(praviNiz[i] +" ");
+			
+		}
+		
+		
+		
 		return niz;
 	}
 
 	public static void main(String[] args) {
+		
 		unosBrojeva();
 	}
 }

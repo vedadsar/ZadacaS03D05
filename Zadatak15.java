@@ -55,7 +55,7 @@ public class Zadatak15 {
 
 	public static void main(String[] args) {
 		System.out
-				.println("Unesite binarni brojeve koje hocete da saberemo ( maksimalno 8 brojeva) ");
+				.println("Unesite binarni brojeve koje hocete da oduzmemo ( maksimalno 8 brojeva) ");
 		String unos1 = TextIO.getln();
 		String unos2 = TextIO.getln();
 		stringZbirBin(zbirBin(unos1, unos2));

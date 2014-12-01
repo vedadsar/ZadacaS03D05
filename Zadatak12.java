@@ -26,18 +26,18 @@ public class Zadatak12 {
  * @param unos
  */
 	public static void binarni(int unos) {
-		String binarniBroj = "";
+		String binarniBroj = "";// prazan string koji cemo popunjavati sa nulama i jedinicama.
 		for ( int i = 0; i<8;i++){
 			
-			if(unos % 2 != 0){
+			if(unos % 2 != 0){//ukoliko je ostatak pri djeljenju unosa sa 2 razlicit od nule, na string dodajemo 1
 				binarniBroj="1"+binarniBroj;
 				
 			}
-			if(unos % 2 ==0){
+			if(unos % 2 ==0){//ukoliko je ostatak pri djeljenju unosa sa 2 jednak  nuli, na string dodajemo 0
 				binarniBroj="0"+binarniBroj;
 			}
 			
-			unos=unos/2;
+			unos=unos/2;// novi unos.
 			
 		}
 		System.out.println(binarniBroj);

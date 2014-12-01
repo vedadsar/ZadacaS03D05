@@ -32,13 +32,16 @@ public class Zadatak17 {
 				brojac = 0;
 
 			}
-
+        
 		}
 		for (int i = 0; i < niz.length; i++) {
-
+        String jedan = "1";
 			if (niz[i] == null) {
 				niz[i] = "";
 			}
+			
+			if(niz[i].contains(jedan))
+				niz[i] = niz[i].substring(0,1);
 
 			System.out.print(niz[i]);
 

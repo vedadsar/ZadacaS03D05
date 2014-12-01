@@ -11,7 +11,7 @@ public class Zadatak18 {
 		for (int i = 1; i <a; i++) {
 			for (int j =1; j < b; j++) {
 				tablica[i][j] =i*j;
-              System.out.print(tablica [i][j]+"    ");
+              System.out.printf("%5d", tablica [i][j] );
               
 			}
 			System.out.println();

@@ -19,7 +19,9 @@ public class Zadatak11 {
 	
 		for (int i =0; i<niz.length;i++){
 			int j=niz[i]+3;
-		   
+		
+			
+			
 			System.out.print((char)j );
 		}
 		

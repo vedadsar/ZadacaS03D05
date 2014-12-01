@@ -17,29 +17,30 @@ public class Zadatak7 {
 	public static String[] nizRijeci(String str) {
 
 		String[] nizStringova = new String[str.length()];
+		str = str +" ";
 		String novaRijec = "";
 		char karakter = ' ';
 		int i = 0, j = 0;
 
 		while (i < str.length()) {
-			if (str.charAt(i) != karakter) {
+			if (str.charAt(i) != karakter) {// Trazenje rijeci, kada dodjemo da razmaka odvajamo rijec.
 				novaRijec = novaRijec + str.substring(i, i + 1);
 	              
-			} else {
-			if(novaRijec.equalsIgnoreCase(okrenutaRijec(novaRijec))){
-				nizStringova[j] = novaRijec;
-				j++;
+			} else {// provjeravamo da li je rijec koju ispitujemo palindrom, rijec mora biti veca od 2 ( nekako logicno )
+			if(novaRijec.equalsIgnoreCase(okrenutaRijec(novaRijec)) && novaRijec.length()>2){
+				nizStringova[j] = novaRijec; //Novu rijec ubacujemo u niz stringova.
+				j++;// povecavamo index niza stringova.
 			}
 				
-				novaRijec = "";
+				novaRijec = "";// Novu rijec vracamo na prazan string
 			}
 
-			i++;
+			i++;//povecavamo brojac karaktera.
              
 		}
         
-		for (int k = 0; k < nizStringova.length; k++) {
-             if(nizStringova[k]==null){
+		for (int k = 0; k < nizStringova.length; k++) {//for petlja za ispis niza
+             if(nizStringova[k]==null){// ukoliko je neki clan jednak null da preskoci
             	 nizStringova[k]="";
              }
 			System.out.print(nizStringova[k] + " ");
@@ -57,7 +58,7 @@ public class Zadatak7 {
 	public static String okrenutaRijec (String rijec){
 		
 		String okrenutaRijec = "";
-		for(int i = (rijec.length()-1);i>=0;i--){
+		for(int i = (rijec.length()-1);i>=0;i--){//for petlja ubacuje u novi string rijeci od zadnje do pr ve.
 		
 			okrenutaRijec= okrenutaRijec+ ""+rijec.charAt(i);
 			

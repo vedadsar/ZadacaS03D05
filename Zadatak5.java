@@ -25,10 +25,10 @@ public class Zadatak5 {
  */
 	public static String[] podjeljeniString(String[] nekiString) {
 		String[] str = nekiString;
-		for (int i = 0; i < nekiString.length; i++) {
-
+		for (int i = 0; i < nekiString.length; i++) { // for petlja za ispisivanje nekog niza stringova.
+			if (nekiString[i]!=null) {
 			System.out.print(nekiString[i] + " ");
-
+			}
 		}
 
 		return str;
@@ -45,16 +45,16 @@ public class Zadatak5 {
 		int i = 0, j = 0;
 
 		while (i < recenica.length()) {
-			if (recenica.charAt(i) != karakter) {
-				novaRijec = novaRijec + recenica.substring(i, i + 1);
+			if (recenica.charAt(i) != karakter) {// provjeravamo da li smo dosli do razmaka
+				novaRijec = novaRijec + recenica.substring(i, i + 1); //ukoliko nismo, dodajemo sljedece slovo na nas string
 
 			} else {
-				nizStringova[j] = novaRijec;
-				j++;
-				novaRijec = "";
+				nizStringova[j] = novaRijec; // ukoliko smo dosli do razmaka rijec dodajemo u niz.
+				j++; // povecavamo index niza
+				novaRijec = ""; // vracamo novu rijec na prazan string
 			}
 
-			i++;
+			i++; //povecavamo brojac karaktera.
 
 		}
 		return nizStringova;

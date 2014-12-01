@@ -10,43 +10,45 @@
  *
  */
 public class Zadatak16 {
-/**
- * Funkcija ispisuje prosti i slozeni niz.
- */
+	/**
+	 * Funkcija ispisuje prosti i slozeni niz.
+	 */
 	public static void niz() {
-		int [] niz = new int[10];
+		int[] niz = new int[10];
 		for (int i = 0; i < 10; i++) {
 			System.out.println("Unesite 10 brojeva vecih od 0 ");
 			int broj = TextIO.getInt();
 			niz[i] = broj;
-			
+
 		}
 		System.out.println("Vas prosti niz je : ");
-		 prostiNiz(niz);
-		 System.out.println();
-		 System.out.println("Vas slozeni niz je : ");
-	     slozenNiz(niz);
+		prostiNiz(niz);
+		System.out.println();
+		System.out.println("Vas slozeni niz je : ");
+		slozenNiz(niz);
 
-			
 	}
-/**
- * Funkcija prima neki niz, i vraca proste brojeve iz tog niza.
- * @param broj niz brojeva
- * @return niz prostih brojeva
- */
+
+	/**
+	 * Funkcija prima neki niz, i vraca proste brojeve iz tog niza.
+	 * 
+	 * @param broj
+	 *            niz brojeva
+	 * @return niz prostih brojeva
+	 */
 	public static int[] prostiNiz(int[] broj) {
 		boolean prost = true;
 		int[] prostNiz = new int[broj.length];
 		int idx = 0;
 		for (int j = 0; j < broj.length; j++) {
 			for (int i = 2; i < broj[j]; i++) {
-                
-				if(broj[j]==1){
-					prost=true;
-					
+
+				if (broj[j] == 1) {
+					prost = true;
+
 				}
-				
-				if (broj[j] % i == 0 )  {
+
+				if (broj[j] % i == 0) {
 					prost = false;
 					break;
 
@@ -64,28 +66,31 @@ public class Zadatak16 {
 		}
 
 		for (int i = 0; i < prostNiz.length; i++) {
+			if(prostNiz[i] != 0){
 			System.out.print(prostNiz[i] + " ");
 		}
-
+		}
 		return prostNiz;
 	}
-/**
- * Funkcija prima neki niz, i vraca slozene brojeve iz tog niza.
- * @param broj niz brojeva
- * @return niz slozenih brojeva.
- */
-	public static int[] slozenNiz(int [] broj){
-		
+
+	/**
+	 * Funkcija prima neki niz, i vraca slozene brojeve iz tog niza.
+	 * 
+	 * @param broj
+	 *            niz brojeva
+	 * @return niz slozenih brojeva.
+	 */
+	public static int[] slozenNiz(int[] broj) {
+
 		boolean prost = true;
 		int[] slozeniNiz = new int[broj.length];
 		int idx = 0;
 		for (int j = 0; j < broj.length; j++) {
 			for (int i = 2; i < broj[j]; i++) {
-                
-				
+
 				if (broj[j] == 1)
-					prost=false;
-				
+					prost = false;
+
 				if (broj[j] % i == 0 && broj[j] != 1) {
 					prost = true;
 					break;
@@ -104,16 +109,17 @@ public class Zadatak16 {
 		}
 
 		for (int i = 0; i < slozeniNiz.length; i++) {
-			System.out.print(slozeniNiz[i] + " ");
+			if (slozeniNiz[i] != 0 && slozeniNiz[i] != 1) {
+				System.out.print(slozeniNiz[i] + " ");
+			}
 		}
-
 		return slozeniNiz;
-		
+
 	}
-	
+
 	public static void main(String[] args) {
 		niz();
-		
+
 	}
-       
+
 }

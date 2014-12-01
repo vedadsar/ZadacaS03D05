@@ -5,8 +5,15 @@ public class Zadatak13 {
 	
 	
 	public static void main(String[] args) {
+	int unos = 0;
+		do  {
+					
 	System.out.println("Unesite vas broj: ");
-	int unos = TextIO.getInt();
+	 unos = TextIO.getInt();
+	     if(unos<0)
+	    	 System.out.println("broj je manji od nule, pokusajte ponovo.");
+		}while(unos<0);
+		
 	System.out.println("Vas broj u binarnom sistemu glasi: ");
 	System.out.print("{ ");
 	binarni(unos);
